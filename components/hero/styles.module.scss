@@ -17,3 +17,7 @@
   width: 644px;
   height: 446px;
 }
+.dealsContainer {
+  @apply flex items-center justify-between;
+  padding: 45px 68px;
+}
