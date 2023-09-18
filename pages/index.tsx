@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Layout from "@/components/layout";
 import Navbar from "@/components/navbar";
 import NewArrivals from "@/components/newArrivals";
+import RecentlyBought from "@/components/recentlyBought";
 import Trending from "@/components/trending";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Trending />
       <NewArrivals />
+      <RecentlyBought />
     </Layout>
   );
 }

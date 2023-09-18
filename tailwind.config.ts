@@ -38,6 +38,7 @@ const config: Config = {
       lightGrey: "#F2F2F2",
       black: "#000000",
       white: "#ffffff",
+      red: "#C1272D",
     },
     boxShadow: {
       button: "0px 4px 4px 0px rgba(0, 0, 0, 0.25);",

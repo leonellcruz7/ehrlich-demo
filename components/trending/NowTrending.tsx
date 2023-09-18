@@ -8,7 +8,7 @@ import { hashtags, trends } from "./data";
 const NowTrending = () => {
   return (
     <div className={styles.trendingContainer}>
-      <div className="px-5 pb-5 pt-[10px]">
+      <div className="title-container mx-auto">
         <p className="text-xxl font-extrabold">Now Trending</p>
       </div>
       <div className="px-5 pb-5 pt-[10px]">
