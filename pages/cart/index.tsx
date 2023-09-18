@@ -20,7 +20,7 @@ const Cart = () => {
             <p>Need help? 01954208301</p>
             <div className="flex items-center gap-2">
               <i className="ri-chat-1-line"></i>
-              <p>Let's chat</p>
+              <p>Lets chat</p>
             </div>
           </div>
         </div>

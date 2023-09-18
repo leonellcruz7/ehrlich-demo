@@ -8,7 +8,7 @@ const ProductItem: FC<ProductCardPropTypes> = ({ item }) => {
   const dispatch = useDispatch();
   const { cart } = useSelector((state: CartRootState) => state.cart);
   const quantity = cart.filter((product) => product.id === item.id);
-  const { image, description, price, old_price } = item;
+
   const handleRemove = () => {
     const newArr = [...cart];
     const indexToRemove = newArr.indexOf(item);
@@ -21,17 +21,17 @@ const ProductItem: FC<ProductCardPropTypes> = ({ item }) => {
     <div className="w-full flex justify-between border-t-[1px] border-lightGrey py-4">
       <div className="flex gap-4">
         <div className="w-[80px] h-[100px] bg-grey">
-          <Image width={80} height={120} alt="" src={image} />
+          <Image width={80} height={120} alt="" src={item?.image} />
         </div>
         <div className="flex flex-col justify-between">
-          <p>{description}</p>
+          <p>{item?.description}</p>
           <button onClick={handleRemove} className="w-fit text-xs text-[blue]">
             <i className="text-red text-[24px] ri-delete-bin-line"></i>
           </button>
         </div>
       </div>
       <p className="font-semibold">
-        ${price} x {quantity.length}
+        ${item?.price} x {quantity.length}
       </p>
     </div>
   );

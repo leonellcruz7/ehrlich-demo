@@ -21,7 +21,7 @@ const ShoppingBag = () => {
           <EmptyCart />
         ) : (
           filteredCart.map((item, index) => {
-            return <ProductItem item={item} />;
+            return <ProductItem key={index} item={item} />;
           })
         )}
       </div>

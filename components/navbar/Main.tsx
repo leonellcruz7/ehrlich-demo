@@ -12,7 +12,7 @@ import CartOverview from "./CartOverview";
 const Main = () => {
   const { cart } = useSelector((state: CartRootState) => state.cart);
   const [showCart, setShowCart] = useState(false);
-  const cartRef = useRef(null);
+  const cartRef = useRef<HTMLDivElement>(null);
   const menus = [
     { title: "women", link: "#" },
     { title: "plus", link: "#" },
@@ -21,7 +21,7 @@ const Main = () => {
   ];
 
   useEffect(() => {
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", (e: any) => {
       if (cartRef.current && !cartRef.current.contains(e.target)) {
         setShowCart(false);
       }
