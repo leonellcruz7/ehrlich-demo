@@ -1,0 +1,14 @@
+.blackFridayContainer {
+  @apply relative w-full bg-black flex justify-between items-center overflow-hidden;
+  padding-left: 118px;
+  padding-right: 176px;
+  height: 75px;
+}
+
+.blackFridayBackground {
+  @apply absolute left-0 z-0;
+  transform: translateX(-380px);
+  > img {
+    @apply h-auto;
+  }
+}

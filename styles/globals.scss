@@ -12,12 +12,15 @@
   max-width: 1440px;
 }
 .button {
-  @apply w-fit uppercase font-semibold text-center shadow-button;
+  @apply w-fit uppercase font-semibold text-center shadow-button transition-all;
   &.white {
-    @apply text-black bg-white;
+    @apply text-black bg-white hover:brightness-90;
   }
   &.black {
     @apply bg-black text-white;
+    &:hover {
+      background-color: #353535;
+    }
   }
   &.large {
     padding: 15px 30px;
