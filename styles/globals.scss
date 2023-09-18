@@ -35,4 +35,7 @@
 .title-container {
   @apply w-fit;
   padding: 10px 20px 20px 20px;
+  > p {
+    @apply capitalize text-xxl font-extrabold;
+  }
 }

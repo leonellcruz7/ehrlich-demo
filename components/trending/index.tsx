@@ -6,9 +6,11 @@ import NowTrending from "./NowTrending";
 
 const Trending = () => {
   return (
-    <div className={styles.mainContainer}>
-      <BlackFriday />
-      <NowTrending />
+    <div className="main-container">
+      <div className={styles.mainContainer}>
+        <BlackFriday />
+        <NowTrending />
+      </div>
     </div>
   );
 };
