@@ -12,7 +12,10 @@
   max-width: 1440px;
 }
 .button {
-  @apply uppercase text-black font-semibold text-center shadow-button;
+  @apply w-fit uppercase font-semibold text-center shadow-button;
+  &.white {
+    @apply text-black bg-white;
+  }
   &.black {
     @apply bg-black text-white;
   }
