@@ -4,6 +4,7 @@ import { TrendItemPropTypes } from "./types";
 import Image from "next/image";
 import HashTag from "../shared/HashTag";
 import { hashtags, trends } from "./data";
+import Link from "next/link";
 
 const NowTrending = () => {
   return (
@@ -35,13 +36,15 @@ export default NowTrending;
 const TrendItem: FC<TrendItemPropTypes> = ({ trend }) => {
   const { image, title } = trend;
   return (
-    <div className={styles.trendItemContainer}>
-      <div className="w-[225px] h-[300px] bg-grey">
-        <Image width={225} height={300} alt="" src={image} />
+    <Link href="#">
+      <div className={styles.trendItemContainer}>
+        <div className="w-[225px] h-[300px] bg-grey">
+          <Image width={225} height={300} alt="" src={image} />
+        </div>
+        <div className="h-[50px] justify-center flex items-center">
+          <p className="text-lg font-semibold uppercase">{title}</p>
+        </div>
       </div>
-      <div className="h-[50px] justify-center flex items-center">
-        <p className="text-lg font-semibold uppercase">{title}</p>
-      </div>
-    </div>
+    </Link>
   );
 };
