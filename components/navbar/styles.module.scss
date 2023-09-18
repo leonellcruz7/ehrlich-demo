@@ -10,8 +10,9 @@
 .menuList {
   @apply flex;
   > .menu {
+    @apply cursor-pointer hover:-translate-y-1 transition-all;
     padding: 9px 15px;
-    > p {
+    > li {
       @apply uppercase;
     }
   }
@@ -20,13 +21,13 @@
 .navbarFeatures {
   @apply flex gap-6 items-center;
   > i {
-    @apply text-grey;
+    @apply text-grey cursor-pointer hover:text-black transition-all;
     font-size: 20px;
   }
 }
 
 .currencySelector {
-  @apply flex items-center justify-between;
+  @apply flex items-center justify-between cursor-pointer;
   padding: 5px 6px;
   width: 110px;
   height: 35px;
@@ -35,6 +36,7 @@
 }
 
 .secondary {
-  @apply w-full;
+  @apply w-full flex items-center justify-between;
+  padding: 10px 39px;
   height: 50px;
 }
