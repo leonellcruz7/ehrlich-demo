@@ -1,10 +1,17 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { ProductCardPropTypes } from "./types";
 import Image from "next/image";
 import classNames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { CartRootState, addToCart } from "@/redux/cart";
 
 const ProductCard: FC<ProductCardPropTypes> = ({ item }) => {
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state: CartRootState) => state.cart);
   const { image, description, price, old_price } = item;
+  const handleAddtoCart = () => {
+    dispatch(addToCart([...cart, item]));
+  };
   return (
     <div className="p-5 w-[265px] min-h-[415px] flex flex-col justify-between">
       <div className="w-[225px] h-[300px] bg-lightGrey">
@@ -26,7 +33,9 @@ const ProductCard: FC<ProductCardPropTypes> = ({ item }) => {
         </p>
         {old_price && <p className="text-sm font-semibold">${old_price}</p>}
       </div>
-      <button className="button black smaller mt-2">Add to Cart</button>
+      <button onClick={handleAddtoCart} className="button black smaller mt-2">
+        Add to Cart
+      </button>
     </div>
   );
 };
