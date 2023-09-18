@@ -30,6 +30,10 @@
     padding: 10px 20px;
     font-size: 18px;
   }
+  &.smaller {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }
 
 .title-container {
@@ -41,6 +45,6 @@
 }
 
 .input {
-  @apply w-full bg-lightGrey text-sm;
+  @apply w-full bg-lightGrey text-sm outline-none;
   padding: 9px 17px;
 }

@@ -26,6 +26,7 @@ const ProductCard: FC<ProductCardPropTypes> = ({ item }) => {
         </p>
         {old_price && <p className="text-sm font-semibold">${old_price}</p>}
       </div>
+      <button className="button black smaller mt-2">Add to Cart</button>
     </div>
   );
 };
