@@ -39,3 +39,8 @@
     @apply capitalize text-xxl font-extrabold;
   }
 }
+
+.input {
+  @apply w-full bg-lightGrey text-sm;
+  padding: 9px 17px;
+}
