@@ -34,6 +34,9 @@
     padding: 5px 10px;
     font-size: 14px;
   }
+  &.full {
+    width: 100%;
+  }
 }
 
 .title-container {
@@ -47,4 +50,11 @@
 .input {
   @apply w-full bg-lightGrey text-sm outline-none;
   padding: 9px 17px;
+}
+
+.divider {
+  &.horizontal {
+    @apply w-full bg-lightGrey;
+    height: 1px;
+  }
 }

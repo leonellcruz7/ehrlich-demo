@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.scss";
 import Logo from "../assets/Logo";
 import CurrencySelector from "./CurrencySelector";
@@ -6,8 +6,8 @@ import classNames from "classnames";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { CartRootState } from "@/redux/cart";
-import { ProductCardPropTypes } from "../shared/ProductCard/types";
-import Image from "next/image";
+
+import CartOverview from "./CartOverview";
 
 const Main = () => {
   const { cart } = useSelector((state: CartRootState) => state.cart);
@@ -42,7 +42,7 @@ const Main = () => {
           })}
         </ul>
         <div>
-          <Link href="#">
+          <Link href="/">
             <Logo />
           </Link>
         </div>
@@ -79,49 +79,3 @@ const Main = () => {
 };
 
 export default Main;
-
-const CartOverview = () => {
-  const { cart } = useSelector((state: CartRootState) => state.cart);
-  const isEmpty = cart.length === 0;
-  return (
-    <div className="w-[500px] h-[800px] bg-white border-[1px] border-[#f2f2f2] p-4 flex flex-col gap-4">
-      {isEmpty ? (
-        <EmptyCart />
-      ) : (
-        cart.map((product, index) => {
-          return <CartItem item={product} />;
-        })
-      )}
-    </div>
-  );
-};
-
-const EmptyCart = () => {
-  return (
-    <div className="w-full h-[80%] flex justify-center items-center text-grey">
-      No items on your cart yet
-    </div>
-  );
-};
-
-const CartItem: FC<ProductCardPropTypes> = ({ item }) => {
-  const { image, description, price, old_price } = item;
-  return (
-    <div className="w-full p-4 border-b-[1px] border-lightGrey flex gap-4 hover:bg-lightGrey cursor-pointer transition-all">
-      <div className="min-w-[80px] h-[100px] bg-grey">
-        <Image width={80} height={120} alt="" src={image} />
-      </div>
-      <div>
-        <p className="text-sm leading-[110%] text-grey">{description}</p>
-        <div>
-          {old_price && (
-            <p className={classNames("text-sm text-red")}>
-              Old Price: ${old_price}
-            </p>
-          )}
-          <p className={classNames("text-sm")}>Price: ${price}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
