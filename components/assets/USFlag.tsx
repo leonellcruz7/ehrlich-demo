@@ -9,7 +9,7 @@ const USFlag = () => {
       viewBox="0 0 25 25"
       fill="none"
     >
-      <g clip-path="url(#clip0_4_79)">
+      <g clipPath="url(#clip0_4_79)">
         <path
           d="M18.75 2.57812C16.9141 1.44531 14.8047 0.78125 12.5 0.78125V2.57812H18.75Z"
           fill="#ED1C24"

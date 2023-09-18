@@ -14,7 +14,7 @@ const Main = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-white">
       <div className={classNames("main-container", styles.main)}>
         <ul className={styles.menuList}>
           {menus.map((menu, index) => {

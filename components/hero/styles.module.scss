@@ -1,0 +1,23 @@
+.heroContainer {
+  @apply relative overflow-hidden flex items-start justify-end;
+  min-height: 650px;
+}
+
+.heroImage {
+  @apply absolute left-0 z-10;
+  background-size: cover;
+}
+
+.backgroundImage {
+  @apply absolute right-0;
+  filter: opacity(0.4);
+}
+.promo {
+  @apply z-20 p-8;
+  width: 644px;
+  height: 446px;
+}
+.dealsContainer {
+  @apply flex items-center justify-between;
+  padding: 45px 68px;
+}

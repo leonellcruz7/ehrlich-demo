@@ -42,7 +42,7 @@ const Secondary = () => {
         {navItems.map((item, index) => {
           const { title, link, icon } = item;
           return (
-            <Link href={link}>
+            <Link key={index} href={link}>
               <div className="flex items-center gap-[15px]">
                 {icon} <p className="text-xs">{title}</p>
               </div>
