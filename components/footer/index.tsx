@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div>
       <Signup />
-      <div className="p-10">
+      <div className="main-container p-10">
         <div className="flex gap-[112px]">
           <Information />
           <div>
