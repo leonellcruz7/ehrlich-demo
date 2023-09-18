@@ -12,7 +12,7 @@ const SocialMedia = () => {
         {socialMediaList.map((item, index) => {
           const { icon, link } = item;
           return (
-            <Link className="w-5 h-5" href={link}>
+            <Link key={index} className="w-5 h-5" href={link}>
               {icon}
             </Link>
           );

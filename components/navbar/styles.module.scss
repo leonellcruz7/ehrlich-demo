@@ -22,7 +22,7 @@
 
 .navbarFeatures {
   @apply flex gap-6 items-center;
-  > i {
+  i {
     @apply text-grey cursor-pointer hover:text-black transition-all;
     font-size: 20px;
   }

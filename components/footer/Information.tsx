@@ -9,7 +9,7 @@ const Information = () => {
         {footerList.map((category, index) => {
           const { title, list } = category;
           return (
-            <div className="pr-5">
+            <div key={index} className="pr-5">
               <div className="p-[10px]">
                 <p className="uppercase text-xs font-semibold">{title}</p>
               </div>
