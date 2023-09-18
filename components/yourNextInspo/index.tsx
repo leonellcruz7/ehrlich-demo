@@ -18,7 +18,7 @@ const YourNextInspo = () => {
         <div className="flex justify-between w-full">
           {inspoList.map((item, index) => {
             return (
-              <div className="w-[225px] h-[225px] bg-grey">
+              <div key={index} className="w-[225px] h-[225px] bg-grey">
                 <Image width={225} height={225} alt="" src={item} />
               </div>
             );
