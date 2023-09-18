@@ -6,3 +6,8 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+
+.main-container {
+  @apply mx-auto;
+  max-width: 1440px;
+}
