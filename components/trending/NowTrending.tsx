@@ -9,7 +9,7 @@ const NowTrending = () => {
   return (
     <div className={styles.trendingContainer}>
       <div className="title-container mx-auto">
-        <p className="text-xxl font-extrabold">Now Trending</p>
+        <p>Now Trending</p>
       </div>
       <div className="px-5 pb-5 pt-[10px]">
         <p className="text-sm">See what everyone’s wearing right now </p>

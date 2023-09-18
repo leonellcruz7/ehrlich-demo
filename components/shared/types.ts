@@ -3,6 +3,6 @@ export interface ProductCardPropTypes {
     image: string;
     description: string;
     price: number;
-    old_price: number;
+    old_price: null | number;
   };
 }

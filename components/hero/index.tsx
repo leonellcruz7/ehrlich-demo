@@ -8,7 +8,7 @@ import Deals from "./Deals";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="main-container">
       <div className={styles.heroContainer}>
         <div className={styles.heroImage}>
           <Image alt="" width={850} height={650} src={hero} />
