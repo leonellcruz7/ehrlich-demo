@@ -1,5 +1,6 @@
 .navbarContainer {
-  @apply w-screen fixed top-0 z-50;
+  @apply w-screen fixed top-0;
+  z-index: 100;
 }
 
 .main {
