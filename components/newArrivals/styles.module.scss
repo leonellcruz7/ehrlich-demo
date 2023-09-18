@@ -1,0 +1,15 @@
+.newArrivalsContainer {
+  @apply relative flex justify-end items-center overflow-hidden;
+  background: url("../../public/newArrivalsBg.png");
+  background-size: contain;
+  padding-right: 148px;
+  height: 400px;
+}
+
+.girl1 {
+  @apply absolute;
+  right: 280px;
+}
+.girl2 {
+  @apply absolute right-0;
+}
