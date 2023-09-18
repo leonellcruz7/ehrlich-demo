@@ -11,3 +11,17 @@
   @apply mx-auto;
   max-width: 1440px;
 }
+.button {
+  @apply uppercase text-black font-semibold text-center shadow-button;
+  &.black {
+    @apply bg-black text-white;
+  }
+  &.large {
+    padding: 15px 30px;
+    font-size: 36px;
+  }
+  &.small {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
