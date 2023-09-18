@@ -35,6 +35,8 @@ const Cart = () => {
 
 const OrderSummary = () => {
   const { cart } = useSelector((state: CartRootState) => state.cart);
+  const prices = cart.map((product) => product.price);
+  const total = prices.length !== 0 ? prices.reduce((a, b) => a + b) : 0;
 
   return (
     <div className="min-w-[30%] flex flex-col items-center gap-2">
@@ -42,7 +44,7 @@ const OrderSummary = () => {
       <div className="w-full border-[1px] p-4">
         <div className="flex justify-between">
           <p>Subtotal ({cart.length})</p>
-          <p>$200</p>
+          <p>${total.toFixed(2)}</p>
         </div>
 
         <p>Free Shipping!</p>
@@ -51,7 +53,7 @@ const OrderSummary = () => {
 
         <div className="flex justify-between">
           <p className="font-semibold">Estimated total</p>
-          <p>$200</p>
+          <p>${total.toFixed(2)}</p>
         </div>
       </div>
       <button className="button black small full">checkout as a guest</button>
