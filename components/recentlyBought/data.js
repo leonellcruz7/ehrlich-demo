@@ -20,7 +20,7 @@ export const items = [
   {
     id: "3",
     image:
-      "https://res.cloudinary.com/dyecs1c3j/image/upload/v1695029424/ehrlich/Rectangle_8_2_c5lml4.png  ",
+      "https://res.cloudinary.com/dyecs1c3j/image/upload/v1695029424/ehrlich/Rectangle_8_2_c5lml4.png",
     description: "Manilla Tan Multi Plaid Oversized Fringe Scarf",
     price: 29,
     old_price: 39,
